@@ -1,0 +1,39 @@
+{
+    "plugins": ["plugins/markdown"],
+    "source": {
+        "include": [
+            "src"
+        ],
+        "exclude": [
+            "webpack.config.js",
+            ".vscode",
+            "dist",
+            "node_modules"
+        ],
+        "includePattern": ".+\\.js(x|doc)?$"
+    },
+    "tags": {
+        "allowUnknownTags": false,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "opts": {
+        "encoding": "utf8",
+        "template": "templates/default",
+        "destination": "./docs/",
+        "recurse": true,
+        "verbose": true
+    },
+    "markdown": {
+        "parser": "gfm",
+        "hardwrap": true
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true,
+            "includeDate": true,
+            "useLongnameInNav": true
+        }
+      }
+}
